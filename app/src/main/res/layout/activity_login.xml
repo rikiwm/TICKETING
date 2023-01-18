@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".LoginActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:padding="4dp"
+        android:background="@drawable/spinner_background"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_margin="20dp"
+            android:textColor="@color/black"
+            android:id="@+id/tvlogin"
+            style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+            android:textAlignment="center"/>
+
+        <ImageView
+            android:id="@+id/login_applogo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/tvlogin"
+            android:src="@drawable/logo1"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/login_applogo">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            app:boxBackgroundColor="@color/bluedark"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:id="@+id/edtUsername"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:id="@+id/edtPass"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/black"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/Linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/ll_lay"
+            >
+            <CheckBox
+                android:id="@+id/remember_me_chkb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remember me"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:textSize="12sp"
+                android:layout_marginLeft="17dp"
+                />
+
+            <TextView
+                android:id="@+id/forget_password_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lupa Password?"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textAlignment="textEnd"
+                android:layout_marginRight="17dp"
+                />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/Linear2"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="@color/bluedark"
+
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:text="Login"
+            android:textColor="@android:color/white"
+            />
+        <TextView
+            android:id="@+id/txtdaftar"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Belum Punya akun DAFTAR! disini"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            android:layout_marginTop="14sp"
+            android:layout_below="@id/login_btn">
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/admin_panel_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADMIN"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/login_btn"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="80dp"
+            android:layout_marginEnd="23dp"
+            android:layout_marginTop="20dp"
+            />
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/not_admin_panel_link"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="I'm not an Admin?"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_below="@+id/login_btn"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="12sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_marginLeft="80dp"-->
+<!--            android:layout_marginStart="25dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:visibility="invisible"-->
+<!--            />-->
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
